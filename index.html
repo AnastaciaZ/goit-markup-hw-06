@@ -60,32 +60,54 @@
             <form>
               <b class="form-title">Оставьте свои давнные, мы вам перезвоним</b>
               <div class="form-field">
+                <svg class="form-icon" width="18px" height="18px">
+                  <use href="./image/form-icon-sprites_l.svg#icon-form-person-black"></use>
+                </svg>
+                  <input class="form-input" type="text" name="user-name" id="name" placeholder=" " />
                   <label for="name" class="form-label">Имя</label>
-                  <input class="form-input" type="text" name="user-name" id="name" />
+                  
               </div>
               <div class="form-field">
-                <label for="tel">Телефон</label>
-                  <input type="tel" name="tel" id="tel" />
+                <svg class="form-icon" width="18px" height="18px">
+                  <use href="./image/form-icon-sprites_l.svg#icon-form-phone-black"></use>
+                </svg>
+                  <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " />
+                  <label for="tel" class="form-label">Телефон</label>
+                  <span class="form-icon"></span>
               </div>
               <div class="form-field">
-                <label for="mail">Почта</label>
-                  <input type="email" name="mail" id="mail" />
+                <svg class="form-icon" width="18px" height="18px">
+                  <use href="./image/form-icon-sprites_l.svg#icon-form-email-black"></use>
+                </svg>
+                  <input class="form-input" type="email" name="mail" id="mail" placeholder=" " />
+                  <label for="mail" class="form-label">Почта</label>
               </div>
+
               <div class="form-field">
-                <label for="comment">Комментарий</label>
-                  <textarea class="comment" name="comment" id="comment" rows="10">Комментарий</textarea>
+                <textarea class="comment" name="comment" id="comment" rows="10"></textarea>
+                <label for="comment" class="form-label-comment">Комментарий</label>
               </div>
-              <div class="form-field">
-                <input type="checkbox" name="agree" value="agree" id="agree" />
-                  <label for="agree">Соглашаюсь с рассылкой и принимаю
+
+              <div class="form-field-checkbox">
+                  <label class="checkbox-label">
+                   
+                   Соглашаюсь с рассылкой и принимаю
                     <a href="" class="checkbox-agree">Условия договора</a>
+                    <input class="checkbox" type="checkbox" name="agree" value="agree" />
+                    <svg class="form-icon-ckeckbox">
+                      <use href="./image/form-icon-sprites_l.svg#icon-icon-check"></use>
+                    </svg>
                   </label>
               </div>
                 
               
                         
             <button type="submit" class="form-button">Отправить</button>
-            <button data-modal-close>Закрыть</button>
+            <button data-modal-close class="form-button-close">
+              <svg  class="form-icon-close" width="30px" height="30px">
+                <use href="./image/form-icon-sprites_l.svg#icon-ico-close"></use>
+              </svg>
+            </button>
            
           </form>
           </div>
@@ -472,36 +494,24 @@
           <div>
            <!--<span class="footer-title">Подпишитесь на рассылку</span>-->
            <form action="/">
-            <div>
-            <label for="mailing" class="footer-title">Подпишитесь на рассылку</label>
+            <div class="footer-form" >
+            <div class="footer-mailing">
+            <b class="footer-title">Подпишитесь на рассылку</b>
               <input class="footer-input" type="text" name="mailing"  id="mailing" value="E-mail" />
+              <!--<label for="mailing" class="footer-label">E-mail</label>-->
             </div>
               <button class="button-footer">
                 Подписаться
-                <svg width="24px" height="24px">
+                <svg class="button-footer-icon" width="24px" height="24px">
                   <use href="./image/sprites_l.svg#icon-telegram_l"></use>
                 </svg>
               <!--<img src="image/telegram.svg" alt="" />-->
               </button>
+            </div>
            </form>
           </div>
          </div>
       </footer>
-      <script>
-        (() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
-
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
-      </script>
+      <script src="./js/modal.js"></script>
     </body>
 </html>

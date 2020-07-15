@@ -421,6 +421,7 @@ img {
   /*letter-spacing: 1.9em;*/
   text-decoration: none;
   border: transparent;
+  outline: none;
 }
 .button-footer {
   display: flex;
@@ -769,6 +770,7 @@ form {
   line-height: 1.14;
   letter-spacing: 0.01em;
   transform: translateY(10%);
+  transition: var(--transition-timing-function);
 
 }
 
@@ -789,9 +791,15 @@ form {
   color: var(--primary-text-color);
 }
 .comment:focus + .form-label-comment,
-.comment:placeholder-shown + .form-label-comment {
+.comment:not(:placeholder-shown) + .form-label-comment {
   color: var(--accent-color);
   transform: translateY(-28px);
+  transition: var(--transition-timing-function);
+}
+.comment::placeholder-shown + .form-label-comment {
+  color: var(--accent-color);
+  transform: translateY(-28px);
+  transition: var(--transition-timing-function);
 }
 .checkbox-agree {
   padding-left: 4px;
@@ -870,19 +878,18 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border-color: color: var(--primary-text-color0);
-  outline: var(--primary-text-color0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: var(--primary-text-color);
   background-color: inherit;
   position: absolute;
   top: 8px;
   right: 8px;
 }
-.form-button-close:hover,
-.form-button-close:focus-within {
- border-color: color  none;
+.form-close:hover,
+.form-close:focus-within  {
+ border: none;
+ fill: var(--accent-color);
 }
-
-
 
 textarea {
   resize: none;

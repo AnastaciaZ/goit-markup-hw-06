@@ -103,12 +103,13 @@
               
                         
             <button type="submit" class="form-button">Отправить</button>
-            <button data-modal-close class="form-button-close">
+            <div>
+            <button data-modal-close class="form-close">
               <svg  class="form-icon-close" width="30px" height="30px">
                 <use href="./image/form-icon-sprites_l.svg#icon-ico-close"></use>
               </svg>
             </button>
-           
+          </div>
           </form>
           </div>
         </div>
@@ -496,7 +497,7 @@
            <form action="/">
             <div class="footer-form" >
             <div class="footer-mailing">
-            <b class="footer-title">Подпишитесь на рассылку</b>
+            <label for="mailing" class="footer-title">Подпишитесь на рассылку</label>
               <input class="footer-input" type="text" name="mailing"  id="mailing" value="E-mail" />
               <!--<label for="mailing" class="footer-label">E-mail</label>-->
             </div>

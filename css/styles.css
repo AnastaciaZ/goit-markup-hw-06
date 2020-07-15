@@ -347,22 +347,23 @@ img {
   
 }  
 .footer-input {
- padding-left: 16px;
- padding-top: 16px;
- padding-bottom: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-background: #2F303A;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 1.25;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background: #2F303A;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  outline: none
 }
 .footer-mailing {
   display: block;
@@ -651,6 +652,7 @@ margin-bottom: 8px;
   }
 .backdrop {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -665,7 +667,7 @@ margin-bottom: 8px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.25);
+  transform: translate(-50%, -50%);
   
 
   min-width: 528px;
@@ -719,6 +721,7 @@ form {
   border-radius: 4px;
   outline: 1px solid var(--accent-color);
   transition: var(--transition-timing-function);
+  cursor: pointer;
 }
 
 .form-field label {
@@ -768,6 +771,7 @@ form {
   transform: translateY(10%);
 
 }
+
 .comment {
   height: 120px;
   padding: 12px 16px;
@@ -827,6 +831,8 @@ align-items: center;
 }
 .form-icon-ckeckbox {
   display: block;
+  top: 2px;
+  left: 8px;
   width: 16px;
   height: 16px;
   border: 3px solid var(--title-text-color);
@@ -857,7 +863,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   
   color: var(--primary-text-color0);
 }  
-.form-button-close {
+.form-close {
   display: flex;
   align-items: center;
   justify-content: center;

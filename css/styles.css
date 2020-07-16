@@ -659,10 +659,14 @@ margin-bottom: 8px;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: var(--transition-timing-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transform: scale(0);
+  transition: var(--transition-timing-function);
 }
 .modal {
   position: absolute;
@@ -677,7 +681,7 @@ margin-bottom: 8px;
   background: #FFFFFF;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  outline: 3px solid red;
+  
   
 }
 form {
@@ -761,7 +765,8 @@ form {
   fill: var(--accent-color);
   transition: var(--transition-timing-function);
 }
-.form-field .form-label-comment {
+.form-coment .form-label-comment {
+  position: absolute;
   top: 10px;
   left: 16px;
   font-style: normal;
@@ -773,11 +778,15 @@ form {
   transition: var(--transition-timing-function);
 
 }
-
+.form-coment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
 .comment {
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -796,11 +805,11 @@ form {
   transform: translateY(-28px);
   transition: var(--transition-timing-function);
 }
-.comment::placeholder-shown + .form-label-comment {
+/*.comment::placeholder-shown + .form-label-comment {
   color: var(--accent-color);
   transform: translateY(-28px);
   transition: var(--transition-timing-function);
-}
+}*/
 .checkbox-agree {
   padding-left: 4px;
   color: var(--accent-color);
